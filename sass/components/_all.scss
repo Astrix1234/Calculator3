@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  background-image: linear-gradient(to right, #000046, #1cb5e0);
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  color: #000046;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.calculator {
+  width: 320px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 80px;
+  &__panel {
+    height: 500px;
+    background-color: #4cb4d7;
+    border-radius: 160px;
+    box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    & ul {
+      display: flex;
+      gap: 8px;
+    }
+    & li {
+      width: 50px;
+      height: 50px;
+      box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #a3e3f4;
+      cursor: pointer;
+      transition: background-color 400ms ease-in-out;
+      &:hover,
+      &:focus {
+        background-color: #c6edf7;
+      }
+    }
+    & .equals {
+      width: 90px;
+      font-size: 50px;
+    }
+  }
+  &__window {
+    position: absolute;
+    z-index: 200;
+    top: -40px;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #bfedf9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 40px;
+    box-shadow: 7px 7px 8px 8px rgba(0, 0, 0, 0.5);
+    & ul {
+      display: flex;
+      gap: 5px;
+    }
+    & .previous-plus-symbol {
+      font-size: 25px;
+    }
+  }
+  &__history {
+    position: absolute;
+    top: 480px;
+    left: 0;
+    z-index: 300;
+    width: 100%;
+    background-color: #bfedf9;
+    box-shadow: 7px 7px 8px 8px rgba(0, 0, 0, 0.5);
+  }
+}
+.history {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+
+  &__reset {
+    background-color: #bfedf9;
+    padding: 5px;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    transition: background-color 400ms ease-in-out;
+    &:hover,
+    &:focus {
+      background-color: #d5f0f8;
+    }
+  }
+}
+.list-history {
+  font-size: 16px;
+  padding: 5px 10px;
+}
+hr {
+  color: #d6eff6;
+}
